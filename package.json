@@ -1,4 +1,7 @@
 {
   "name": "fin-ledger",
+  "scripts": {
+    "dev": "echo testing"
+  },
   "packageManager": "yarn@4.3.1"
 }
