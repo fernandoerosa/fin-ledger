@@ -5,7 +5,7 @@ describe('CreateAccount', () => {
   test('create right account', async () => {
     const useCase: ICreateAccount = CreateAccountFactory.create();
     
-    const result: ICreateAccount.Result = await useCase.create({userId: 'any_id', name: 'any_name', email: 'any_email', password: 'any_password'} as ICreateAccount.Params); 
+    const result: ICreateAccount.Result = await useCase.execute({userId: 'any_id', name: 'any_name', email: 'any_email', password: 'any_password'} as ICreateAccount.Params); 
     const expected: ICreateAccount.Result = {status: 'success', message: 'Account created successfully'};
   
     expect(result).toStrictEqual(expected);

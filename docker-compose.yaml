@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:6.0-rc
+    ports:
+      - 27017:27017
+    container_name: mongo
+    networks:
+      - ledger
+
+networks:
+  ledger:
