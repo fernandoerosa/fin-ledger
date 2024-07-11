@@ -12,3 +12,6 @@
 #!.yarn/cache
 .pnp.*
 yarn.lock
+*-lock.json
+
+node_modules
