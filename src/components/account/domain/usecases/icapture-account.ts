@@ -1,5 +1,5 @@
-export default interface ICaptureAccount {
-    capture: (account: ICaptureAccount.Params) => Promise<ICaptureAccount.Result>;
+export interface ICaptureAccount {
+    execute: (account: ICaptureAccount.Params) => Promise<ICaptureAccount.Result>;
 }
 
 export namespace ICaptureAccount {
@@ -8,7 +8,11 @@ export namespace ICaptureAccount {
     };
 
     export type Result = {
-        status: string;
-        message: string;
+        accounts: {
+            id: string
+            name: string
+            email: string
+            type: number
+        }[]
     };
 }
