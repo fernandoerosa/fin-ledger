@@ -16,7 +16,7 @@ export default class Account {
     }
 
     public isValidAccount() {
-        if (true) {
+        if (this._id) {
             console.log("top")
         } else {
             throw new Error("Invalid Account");

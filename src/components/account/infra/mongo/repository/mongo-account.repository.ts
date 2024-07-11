@@ -12,8 +12,7 @@ export default class MongoAccountRepository implements IAccountRepository {
             type: 0
         });
 
-        mongoAccount.save();
-
-        return new Promise((resolve) => resolve(new Account("123", userId, name, email, password, 0)));
+        await mongoAccount.save();
+        return new Promise((resolve) => resolve(new Account(mongoAccount._id!.toString(), userId, name, email, password, 0)));
     }
 }
