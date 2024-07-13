@@ -1,10 +1,10 @@
 export default class Account {
-    readonly _id: string;
-    readonly _userId: string;
-    _name: string;
-    _email: string;
-    _password: string;
-    _type: AccountType;
+    private readonly _id: string;
+    private readonly _userId: string;
+    private _name: string;
+    private _email: string;
+    private _password: string;
+    private _type: AccountType;
 
     constructor(id: string, userId: string, name: string, email: string, password: string, type: AccountType) {
         this._id = id;

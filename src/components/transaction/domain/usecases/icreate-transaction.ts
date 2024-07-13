@@ -1,17 +1,18 @@
 export interface ICreateTransaction {
-    create: (transaction: ICreateTransaction.Params) => Promise<ICreateTransaction.Result>
+    execute: (params: ICreateTransaction.Params) => Promise<ICreateTransaction.Result>
 }
 
 export namespace ICreateTransaction {
     export type Params = {
         userId: string;
-        accountId: string;
+        sourceAccountId: string;
+        destinyAccountId: string;
         type: string;
         value: number;
     };
 
     export type Result = {
-        status: string;
+        status: number;
         message: string;
     };
 }
