@@ -4,7 +4,7 @@ export default class Transaction {
     private _sourceAccountId: string;
     private _destinyAccountId: string;
     private _type: string;
-    private _value: number;n
+    private _value: number;
 
     constructor(id: string, userId: string, sourceAccountId: string, destinyAccountId: string, type: string, value: number) {
         this._id = id;
