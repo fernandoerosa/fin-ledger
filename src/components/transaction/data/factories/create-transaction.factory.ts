@@ -6,7 +6,7 @@ export default class CreateTransactionFactory {
         throw Error("Utility Class");
     }
 
-    static create(transactionRepository: ITransactionRepository) {
+    static createUseCase(transactionRepository: ITransactionRepository) {
         return new CreateTransaction(transactionRepository);
     }
 }

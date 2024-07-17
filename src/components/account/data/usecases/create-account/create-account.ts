@@ -14,6 +14,7 @@ export default class CreateAcconut implements ICreateAccount {
         account.isValidAccount();
         
         return {
+            id: account.id,
             status: 'success',
             message: 'Account created successfully'
         }

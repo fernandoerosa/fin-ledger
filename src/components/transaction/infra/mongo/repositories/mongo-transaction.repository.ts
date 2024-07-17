@@ -5,9 +5,8 @@ import { MongoTransaction } from "../entity/mongo-transaction";
 export default class MongoTransactionRepository implements ITransactionRepository {
 
     async captureReceived(accountId: string): Promise<Array<Transaction>> {
-        const mongoTransactions = await MongoTransaction.find({destinyAccountId: accountId});
+        const mongoTransactions = await MongoTransaction.find({ destinyAccountId: accountId });
         const transactions = new Array<Transaction>();
-        
         mongoTransactions.map((transaction) => {
             transactions.push(new Transaction(transaction._id.toString(), transaction.userId!, transaction.sourceAccountId!, transaction.destinyAccountId!, transaction.type!, transaction.value!));
         });
@@ -16,9 +15,8 @@ export default class MongoTransactionRepository implements ITransactionRepositor
     };
 
     async captureSent(accountId: string): Promise<Array<Transaction>> {
-        const mongoTransactions = await MongoTransaction.find({sourceAccountId: accountId});
+        const mongoTransactions = await MongoTransaction.find({ sourceAccountId: accountId });
         const transactions = new Array<Transaction>();
-        
         mongoTransactions.map((transaction) => {
             transactions.push(new Transaction(transaction._id.toString(), transaction.userId!, transaction.sourceAccountId!, transaction.destinyAccountId!, transaction.type!, transaction.value!));
         });

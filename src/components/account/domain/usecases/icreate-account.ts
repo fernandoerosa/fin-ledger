@@ -11,6 +11,7 @@ export namespace ICreateAccount {
     };
 
     export type Result = {
+        id: string;
         status: string;
         message: string;
     };

@@ -8,7 +8,7 @@ export default class CreateAccountFactory {
         throw new Error("Utility Class");   
     }
 
-    static create(): ICreateAccount {
+    static createUseCase(): ICreateAccount {
         return new CreateAcconut(new MongoAccountRepository());
     }
 }

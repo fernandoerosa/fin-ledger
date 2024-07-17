@@ -1,5 +1,5 @@
 import { IAccountBalanceReport } from "../../../domain/usecases/iaccount-balance.report";
-import IAccountReportWrapper from "./iaccount-report.wrapper";
+import IAccountReportWrapper from "../../wrappers/iaccount-report.wrapper";
 
 export default class AccountBalance implements IAccountBalanceReport {
 
@@ -9,7 +9,7 @@ export default class AccountBalance implements IAccountBalanceReport {
 
     async execute(params: IAccountBalanceReport.Params): Promise<IAccountBalanceReport.Result> {
         const result = await this._accountReportWrapper.getAccountBalance(params.userId);
-
-        return result
+        
+        return result;
     }
 }

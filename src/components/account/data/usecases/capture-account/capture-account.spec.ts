@@ -7,7 +7,7 @@ import CaptureAccountFactory from "../../factories/usecases/capture-account.fact
 describe('CaptureAccount', () => {
     beforeAll(async () => {
         await connectdb();
-        const useCase: ICreateAccount = CreateAccountFactory.create();
+        const useCase: ICreateAccount = CreateAccountFactory.createUseCase();
         await useCase.execute({userId: 'abc123', name: 'any_name', email: 'any_email', password: 'any_password'} as ICreateAccount.Params); 
     });
     test('capture right account', async () => {
