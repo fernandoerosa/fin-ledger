@@ -1,4 +1,4 @@
-import { connectdb } from "@/shared/mongo/database";
+import { connectdb } from "@/shared/infra/mongo/database";
 import CreateTransactionFactory from "../../factories/create-transaction.factory";
 import MongoTransactionRepository from "@/components/transaction/infra/mongo/repositories/mongo-transaction.repository";
 

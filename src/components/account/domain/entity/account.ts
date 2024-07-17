@@ -15,6 +15,10 @@ export default class Account {
         this._type = type;
     }
 
+    public get id(): string {
+        return this._id;
+    }
+
     public isValidAccount() {
         if (this._id) {
             console.log("top")

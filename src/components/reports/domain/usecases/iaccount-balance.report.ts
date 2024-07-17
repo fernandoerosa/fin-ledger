@@ -1,5 +1,5 @@
 export interface IAccountBalanceReport {
-    execute(userId: IAccountBalanceReport.Params): Promise<IAccountBalanceReport.Result>;
+    execute(params: IAccountBalanceReport.Params): Promise<IAccountBalanceReport.Result>;
 }
 
 export namespace IAccountBalanceReport {

@@ -15,6 +15,14 @@ export default class Transaction {
         this._value = value;
     }
 
+    public get type(): string {
+        return this._type;
+    }
+
+    public get value(): number {
+        return this._value;
+    }
+
     public isValidTransactio() {
         if (! this._id) {
             throw Error("Invalid Transaction");

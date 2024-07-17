@@ -1,5 +1,5 @@
 import { ICreateAccount } from "@/components/account/domain/usecases/icreate-account";
-import { connectdb } from "@/shared/mongo/database";
+import { connectdb } from "@/shared/infra/mongo/database";
 import CreateAccountFactory from "../../factories/usecases/create-account.factory";
 import { ICaptureAccount } from "@/components/account/domain/usecases/icapture-account";
 import CaptureAccountFactory from "../../factories/usecases/capture-account.factory";

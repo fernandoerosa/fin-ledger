@@ -1,6 +1,6 @@
 import { ICreateAccount } from "@/components/account/domain/usecases/icreate-account";
 import CreateAccountFactory from "../../factories/usecases/create-account.factory"
-import { connectdb } from "@/shared/mongo/database";
+import { connectdb } from "@/shared/infra/mongo/database";
 
 describe('CreateAccount', () => {
   test('create right account', async () => {
