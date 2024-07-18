@@ -8,7 +8,7 @@ export default class AccountBalance implements IAccountBalanceReport {
     ) {}
 
     async execute(params: IAccountBalanceReport.Params): Promise<IAccountBalanceReport.Result> {
-        const result = await this._accountReportWrapper.getAccountBalance(params.userId);
+        const result = await this._accountReportWrapper.getAccountBalanceWithAggregate(params.userId);
         
         return result;
     }
