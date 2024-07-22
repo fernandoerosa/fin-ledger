@@ -8,14 +8,23 @@ export class CaptureAccount implements ICaptureAccount {
     ) {}
 
     async execute(params: ICaptureAccount.Params): Promise<ICaptureAccount.Result> {
-        const account = await this._accountRepository.capture(params.userId); 
+        const accounts = await this._accountRepository.capture(params.userId); 
         
-        if (! account) {
+        if (! accounts) {
             throw new Error('Account not found');
         }
 
+        const accountsResult = accounts.map((account) => {
+            return {
+                id: account.id,
+                name: account.name,
+                email: account.email,
+                type: account.type
+            }
+        });
+
         return {
-            accounts: []
-        }
+            accounts: accountsResult
+        };
     } 
 }

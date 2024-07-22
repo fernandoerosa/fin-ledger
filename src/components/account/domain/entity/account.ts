@@ -19,6 +19,18 @@ export default class Account {
         return this._id;
     }
 
+    public get name(): string {
+        return this._name;
+    }
+
+    public get email(): string {
+        return this._email;
+    }   
+
+    public get type(): AccountType {
+        return this._type;
+    }
+
     public isValidAccount() {
         if (this._id) {
             console.log("top")
